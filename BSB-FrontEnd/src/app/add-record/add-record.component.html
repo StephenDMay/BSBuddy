@@ -1,0 +1,26 @@
+<div id="addBS">
+    
+    <span id="textValue"> Value </span>
+    <input type="text" [(ngModel)]="bsValue">
+    <br/>
+    <span id="textValue"> Label </span>
+    <select #labelSelect>
+        <option value="Before Breakfast">Before Breakfast</option>
+        <option value="After Breakfast">After Breakfast</option>
+        <option value="Before Lunch">Before Lunch</option>
+        <option value="After Lunch">After Lunch</option>
+        <option value="Before Dinner">Before Dinner</option>
+        <option value="After Dinenr">After Dinner</option>
+        <option value="Before Snack">Before Snack</option>
+        <option value="Before Bed">Before Bed</option>
+        <option value="Before Workout">Before Workout</option>
+        <option value="After Workout">After Workout</option>
+    </select>
+    <br/>
+    <!-- <span> Date </span>
+    <input type="text" [(ngModel)]="date">
+    <span> Time </span>
+    <input type="text" [(ngModel)]="time"> -->
+    <button id="add" (click)="addRecord(labelSelect.value)">Add</button>
+    <br/>
+</div>

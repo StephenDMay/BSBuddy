@@ -1,0 +1,17 @@
+#singleValue {
+
+    display: inline-block;
+    margin-left: 30px;
+    
+}
+
+#data{
+
+    display: inline;
+}
+
+#allRecords {
+
+    border: 1px solid black;
+}
+
