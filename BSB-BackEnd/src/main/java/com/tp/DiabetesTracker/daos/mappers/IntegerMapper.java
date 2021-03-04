@@ -10,6 +10,8 @@ public class IntegerMapper implements RowMapper<Integer> {
 
     public IntegerMapper(String columnName) {this.columnName = columnName;}
 
+
+
     @Override
     public Integer mapRow(ResultSet resultSet, int i) throws SQLException {
         return resultSet.getInt(columnName);

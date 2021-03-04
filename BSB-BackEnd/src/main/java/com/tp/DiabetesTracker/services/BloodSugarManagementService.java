@@ -1,14 +1,8 @@
 package com.tp.DiabetesTracker.services;
 
-import com.tp.DiabetesTracker.daos.BloodSugarRecordDao;
-import com.tp.DiabetesTracker.daos.FoodItemDao;
-import com.tp.DiabetesTracker.daos.InsulinRatioDao;
-import com.tp.DiabetesTracker.daos.PersonalInfoDao;
+import com.tp.DiabetesTracker.daos.*;
 import com.tp.DiabetesTracker.exceptions.*;
-import com.tp.DiabetesTracker.models.BloodSugarRecord;
-import com.tp.DiabetesTracker.models.FoodItem;
-import com.tp.DiabetesTracker.models.InsulinRatio;
-import com.tp.DiabetesTracker.models.PersonalInfo;
+import com.tp.DiabetesTracker.models.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,11 +21,16 @@ public class BloodSugarManagementService {
     @Autowired
     InsulinRatioDao RatioDao;
 
+
     @Autowired
-    FoodItemDao foodDao;
+    MealDao mealdao;
 
     public BloodSugarRecord addBloodSugar(BloodSugarRecord bg) throws InvalidLabelException, InvalidBSValueException {
         return dao.addBloodSugar(bg);
+    }
+
+    public Meal addMeal(Meal toAdd) {
+        return mealdao.addMeal(toAdd);
     }
 
     public List<BloodSugarRecord> getAllRecords() {
@@ -53,13 +52,6 @@ public class BloodSugarManagementService {
     public PersonalInfo editInfo(PersonalInfo toEdit) throws InvalidWeightException { return piDao.editWeight(toEdit);
     }
 
-    public FoodItem addFoodItem(FoodItem toAdd) throws InvalidProteinException, InvalidFiberException, InvalidMealIdException, InvalidCaloriesException, InvalidQuantityException, InvalidFoodNameException, InvalidDateException, InvalidFatException, InvalidCarbsException {
-        return foodDao.addFoodItem(toAdd);
-    }
-
-    public List<FoodItem> getAllItems() { return foodDao.getAllItems();
-    }
-
 
     public List<BloodSugarRecord> getRecordByDate() {
         return dao.getRecordsByDate();
@@ -67,5 +59,10 @@ public class BloodSugarManagementService {
 
     public List<PersonalInfo> getInfo() {
         return piDao.getInfo();
+    }
+
+
+    public List<Integer> getDailyCarbs() {
+        return mealdao.getDailyCarbs();
     }
 }
