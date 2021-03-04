@@ -1,6 +1,8 @@
 package com.tp.DiabetesTracker.daos;
 
+import com.tp.DiabetesTracker.daos.mappers.DailyMapper;
 import com.tp.DiabetesTracker.daos.mappers.IntegerMapper;
+import com.tp.DiabetesTracker.models.DailyValues;
 import com.tp.DiabetesTracker.models.Meal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
@@ -34,10 +36,10 @@ public class MealPostgresDao implements MealDao{
     }
 
     @Override
-    public List<Integer> getDailyCarbs() {
-        List<Integer> dailyCarbs = template.query("SELECT * FROM public.\"Daily Carbs\"",
-                new IntegerMapper("Daily Carbs"));
+    public List<DailyValues> getDailyValues() {
+        List<DailyValues> dailyValues = template.query("SELECT * FROM public.\"Daily Values\"",
+                new DailyMapper());
 
-        return dailyCarbs;
+        return dailyValues;
     }
 }

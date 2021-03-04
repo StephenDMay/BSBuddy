@@ -2,6 +2,7 @@ package com.tp.DiabetesTracker.controllers;
 
 
 import com.tp.DiabetesTracker.exceptions.InvalidCarbsException;
+import com.tp.DiabetesTracker.models.DailyValues;
 import com.tp.DiabetesTracker.models.Meal;
 import com.tp.DiabetesTracker.services.BloodSugarManagementService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +27,10 @@ public class MealController {
 
     }
 
-    @GetMapping("/dailycarbs")
-    public List<Integer> dailyCarbs() {
-        return service.getDailyCarbs();
+
+    @GetMapping("/dailyvalues")
+    public List<DailyValues> dailyValues() {
+        return service.getDailyValues();
     }
 
 }

@@ -62,7 +62,7 @@ public class BloodSugarManagementService {
     }
 
 
-    public List<Integer> getDailyCarbs() {
-        return mealdao.getDailyCarbs();
+    public List<DailyValues> getDailyValues() {
+        return mealdao.getDailyValues();
     }
 }
