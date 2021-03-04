@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/stephenmay/diabetes-tracker/src/polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! /Users/stephenmay/Desktop/BloodSugarBuddy/BloodSugarBuddyApp/BSB-FrontEnd/src/polyfills.ts */"hN/g");
 
 
 /***/ }),

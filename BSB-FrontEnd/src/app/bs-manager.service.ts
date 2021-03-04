@@ -5,6 +5,8 @@ import { record } from './record';
 import {tap, catchError} from 'rxjs/operators';
 import { food } from './food';
 import { FoodTrackerComponent } from './food-tracker/food-tracker.component';
+import { meal } from './meal';
+import { daily } from './daily';
 
 @Injectable({
   providedIn: 'root'
@@ -45,6 +47,19 @@ export class BsManagerService {
 
 
   } 
+  
+  addMeal(toAdd : meal) : Observable<meal>{
+    console.log(toAdd);
+    return this.http.post<record>(this.baseUrl + "/addmeal", toAdd, this.httpOptions)
+    .pipe(
+      tap(x => console.log(x)),
+      catchError(err => {
+        console.log(err);
+        return of(null);
+      })
+    );
+  }
+  
 
   getByDate() : Observable<record[]> {
     return this.http.get<record[]>(this.baseUrl + "/day")
@@ -56,11 +71,9 @@ export class BsManagerService {
         return of(empty);
       })
     );
-
-
   }
 
-  // COULD make a http client for getNutrition() instead of jquery
+ 
   findFood(name : string) : Observable<food>{
     return this.http.get<food>(this.nutUrl + name)
     .pipe(
@@ -71,7 +84,17 @@ export class BsManagerService {
       })
       );
   }
-  
 
-  
+  getDailyValues() : Observable<daily> {
+    return this.http.get<daily>(this.baseUrl + "/dailyvalues")
+    .pipe(
+      tap(x => console.log(x)),
+      catchError(err => {
+        console.log(err);
+        let empty : daily;
+        return of(empty);
+      })
+      );
+
+  }
 }

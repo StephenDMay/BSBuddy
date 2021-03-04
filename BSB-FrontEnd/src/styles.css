@@ -1,6 +1,6 @@
 
 #page {
-    background-color: #639cd6;
+    background-color: #24305e;
 }
 
 #add {
@@ -14,7 +14,7 @@
     z-index: 1; 
     top: 0; 
     left: 0;
-    background-color: rgb(24, 24, 202);
+    background-color: #f76c6c;
     overflow-x: hidden; 
     padding-top: 20px;
   }

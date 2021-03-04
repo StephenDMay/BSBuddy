@@ -1,9 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+
 #page {
-    background-color: darkseagreen;
+    background-color: #24305e;
 }
+
 #add {
     text-align: center;
 }
+
+.sidenav {
+    height: 100%; 
+    width: 160px; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #f76c6c;
+    overflow-x: hidden; 
+    padding-top: 20px;
+  }
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: ghostwhite;
+    display: block;
+  }
+
+.sidenav a:hover {
+    color: red;
+  }
+
+.main {
+    margin-left: 160px; 
+    padding: 0px 10px;
+  }
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
 
 /*# sourceMappingURL=styles.css.map*/

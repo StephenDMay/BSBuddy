@@ -1,6 +1,15 @@
 
+<main>
+    <div id="dayRecords">
+        <app-record *ngFor="let record of records" [record]="record"></app-record>
 
-<div id="dayRecords">
-<app-record *ngFor="let record of records" [record]="record"></app-record>
+    </div>
+    <br/>
+    <br/>
+    <div id="dayRecords">
+        <span>Daily Carb Intake: </span>
 
-</div>
+        <span>Average Blood Sugar: </span>
+
+    </div>
+</main>
