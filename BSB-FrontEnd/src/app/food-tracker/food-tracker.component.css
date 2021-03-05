@@ -2,17 +2,15 @@
 
     background-color: whitesmoke;
     display: inline-block;
-    border-color: black;
+    border-color: #033d68;
     border-style: solid;
     border-width: 10px;
-    width: 66%;
-    margin-left: 18%;
+    margin-left: 38%;
+    margin-top: 250px;
+    width: 350px;
+    border-radius: 10px;
 }
 
-#body {
-
-    background-color: #24305e;
-}
 
 #button{
     background-color: #2a71d4;
@@ -38,9 +36,10 @@
 
     background-color: whitesmoke;
     display: inline-block;
-    border-color: black;
+    border-color: #033d68;
     border-style: solid;
     border-width: 10px;
-    width: 66%;
-    margin-left: 18%;
+    margin-left: 38%;
+    width: 350px;
+    border-radius: 10px;
 }

@@ -10,6 +10,7 @@ import { AddRecordComponent } from './add-record/add-record.component';
 import {FormsModule} from '@angular/forms';
 import { RecordByDateComponent } from './record-by-date/record-by-date.component';
 import { FoodTrackerComponent } from './food-tracker/food-tracker.component';
+import { DailyValuesComponent } from './daily-values/daily-values.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FoodTrackerComponent } from './food-tracker/food-tracker.component';
     RecordLogsComponent,
     AddRecordComponent,
     RecordByDateComponent,
-    FoodTrackerComponent
+    FoodTrackerComponent,
+    DailyValuesComponent
   ],
   imports: [
     BrowserModule,

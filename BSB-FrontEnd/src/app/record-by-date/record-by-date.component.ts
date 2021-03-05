@@ -21,21 +21,6 @@ export class RecordByDateComponent implements OnInit {
     });
 
 
-    // TODO: Print out values!!!!!!!!!!!!!!!!!
-    this.bsManagerService.getDailyValues().subscribe(list => {
-      this.daily = list;
-      let dailyCarbs = document.createElement("span");
-      //let dailyAvg = document.createElement("span");
-      let dc = this.daily.totalCarbs;
-      ;
-      //let da = this.daily.avgBS.toString();
-      //totalCarbs.textContent = dc;
-      //dailyAvg.textContent = da;
-      console.log(dc);
-
-      document.getElementById("dayValues").appendChild(dailyCarbs);
-      //document.getElementById("dayRecords").appendChild(dailyAvg);
-    })
   }
 
 }

@@ -1,9 +1,13 @@
 #addBS {
     
+    background-color: #6d899d;
     display: inline-block;
-    border: solid black;
+    border-color: #033d68;
+    border-style: solid;
+    border-width: 10px;
     margin-left: 42%;
-
+    margin-top: 250px;
+    border-radius: 10px;
 
 }
 
