@@ -11,6 +11,8 @@ import {FormsModule} from '@angular/forms';
 import { RecordByDateComponent } from './record-by-date/record-by-date.component';
 import { FoodTrackerComponent } from './food-tracker/food-tracker.component';
 import { DailyValuesComponent } from './daily-values/daily-values.component';
+import { PersonalInfoComponent } from './personal-info/personal-info.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { DailyValuesComponent } from './daily-values/daily-values.component';
     AddRecordComponent,
     RecordByDateComponent,
     FoodTrackerComponent,
-    DailyValuesComponent
+    DailyValuesComponent,
+    PersonalInfoComponent,
   ],
   imports: [
     BrowserModule,

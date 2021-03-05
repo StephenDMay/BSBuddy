@@ -1,9 +1,9 @@
 <div id="addBS">
     
-    <span id="textValue"> Value </span>
+    <span id="textValue"> Value:  </span>
     <input type="text" [(ngModel)]="bsValue">
     <br/>
-    <span id="textValue"> Label </span>
+    <span id="textValue"> Label: </span>
     <select #labelSelect>
         <option value="Before Breakfast">Before Breakfast</option>
         <option value="After Breakfast">After Breakfast</option>
@@ -16,6 +16,9 @@
         <option value="Before Workout">Before Workout</option>
         <option value="After Workout">After Workout</option>
     </select>
+    <br/>
+    <span>Note: </span>
+    <input id="notes" type="text">
     <br/>
     
     <button id="add" (click)="addRecord(labelSelect.value)">Add</button>

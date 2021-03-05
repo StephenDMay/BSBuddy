@@ -7,6 +7,7 @@ import { food } from './food';
 import { FoodTrackerComponent } from './food-tracker/food-tracker.component';
 import { meal } from './meal';
 import { daily } from './daily';
+import { info } from './info';
 
 @Injectable({
   providedIn: 'root'
@@ -93,8 +94,21 @@ export class BsManagerService {
         console.log(err);
         let empty : daily;
         return of(empty);
-        let avg = empty.avgBS;
-        let bs = empty.totalCarbs;
+      
+      })
+      );
+
+  }
+
+  getInfo() : Observable<info[]> {
+    return this.http.get<info[]>(this.baseUrl + "/viewinfo")
+    .pipe(
+      tap(x => console.log(x)),
+      catchError(err => {
+        console.log(err);
+        let empty : info[];
+        return of(empty);
+      
       })
       );
 

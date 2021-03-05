@@ -1,5 +1,12 @@
 
 <div id="recordLogs">
     
-<app-record *ngFor="let record of records" [record]="record"></app-record>
+<app-record *ngFor="let record of records | slice:0:15" [record]="record"></app-record>
+
+</div>
+
+<div class="pagination">
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
 </div>
