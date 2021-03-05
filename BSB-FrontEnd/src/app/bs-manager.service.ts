@@ -93,6 +93,8 @@ export class BsManagerService {
         console.log(err);
         let empty : daily;
         return of(empty);
+        let avg = empty.avgBS;
+        let bs = empty.totalCarbs;
       })
       );
 

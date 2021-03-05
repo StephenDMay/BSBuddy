@@ -1,5 +1,5 @@
 export interface daily {
 
-    dailyCarbs: number;
+    totalCarbs: number;
     avgBS: number;
 }
