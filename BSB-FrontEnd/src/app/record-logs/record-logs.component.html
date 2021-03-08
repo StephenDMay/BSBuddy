@@ -1,12 +1,55 @@
+<div>
+    <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="bsValue">
+            <th mat-header-cell *matHeaderCellDef>Blood Sugar</th>
+            <td mat-cell *matCellDef="let record of records" [record]="record">{{record.bsValue}}</td>
+        </ng-container>
 
-<div id="recordLogs">
+        <ng-container matColumnDef="label">
+            <th mat-header-cell *matHeaderCellDef>Label</th>
+            <td mat-cell *matCellDef="let record of records" [record]="record">{{record.label}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef>Date</th>
+            <td mat-cell *matCellDef="let record of records" [record]="record">{{record.date}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="time">
+            <th mat-header-cell *matHeaderCellDef>Time</th>
+            <td mat-cell *matCellDef="let record of records" [record]="record">{{record.time}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+        <tr mat-row *matRowDef="let record; columns: columnsToDisplay"></tr>
+        
+    </table>
+
+    <mat-paginator id="paginator" [pageSize]="10" [pageSizeOptions]="[10,20]" showFirstLastButtons></mat-paginator>
+</div>
+
+
+
+    <!-- <table >
+    <thead>
+        <tr>
+            <th>Blood Sugar</th>
+            <th>Label</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr >
+    </thead>
+    <tbody>    
+        <tr *ngFor="let record of records" [record]="record">
+            <th>{{record.bsValue}}</th>
+            <td>{{record.label}}</td>
+            <td>{{record.date}}</td>
+            <td>{{record.time}}</td>
+        </tr>
+    </tbody>
     
-<app-record *ngFor="let record of records | slice:0:15" [record]="record"></app-record>
+        
+    
+</table> -->
 
-</div>
 
-<div class="pagination">
-    <a href="#">1</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
-</div>

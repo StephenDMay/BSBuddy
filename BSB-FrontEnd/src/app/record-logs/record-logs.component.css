@@ -13,14 +13,7 @@ border-radius: 20px;
 
 }
 
-.pagination {
-    display: inline-block;
-
-}
-
-.pagination a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    
+#paginator {
+    margin-right: 37%;
+    margin-top: 10px;
 }

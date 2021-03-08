@@ -1,3 +1,18 @@
-<div id="info">
-    <p>{{info.name}} | {{info.height}} | {{info.weight}} | {{info.minBS}} | {{info.maxBS}}</p>
+<div id="info" >
+    <div *ngFor="let info of info" [info]="info">
+        <h4>Welcome to {{info.name}}'s Blood Sugar Buddy!</h4>
+        <br/>
+        <span>Height: {{info.height}}</span>
+        <br/>
+        <span>Weight: {{info.weight}}</span>
+        <br/>
+        <span>Minimum BS Value: {{info.minBS}}</span>
+        <br/>
+        <span>Maximum BS Value: {{info.maxBS}}</span>
+        
+        
+        
+        
+    </div>
+    
 </div>

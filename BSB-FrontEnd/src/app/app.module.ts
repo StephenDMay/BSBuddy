@@ -12,6 +12,9 @@ import { RecordByDateComponent } from './record-by-date/record-by-date.component
 import { FoodTrackerComponent } from './food-tracker/food-tracker.component';
 import { DailyValuesComponent } from './daily-values/daily-values.component';
 import { PersonalInfoComponent } from './personal-info/personal-info.component';
+import { MatTableModule, MatTableDataSource, } from '@angular/material/table';
+import { CdkTableModule } from '@angular/cdk/table';
+import { MatPaginatorModule } from '@angular/material/paginator'
 
 
 @NgModule({
@@ -29,7 +32,9 @@ import { PersonalInfoComponent } from './personal-info/personal-info.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

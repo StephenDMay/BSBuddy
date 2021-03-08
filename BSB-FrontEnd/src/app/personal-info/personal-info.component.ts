@@ -14,6 +14,9 @@ export class PersonalInfoComponent implements OnInit {
   constructor(private service : BsManagerService) { }
 
   ngOnInit(): void {
+    this.service.getInfo().subscribe(list => {
+      this.info = list;
+    });
   }
 
 }

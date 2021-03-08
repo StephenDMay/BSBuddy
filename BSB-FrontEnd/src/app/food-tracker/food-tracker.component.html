@@ -19,7 +19,7 @@
             </span>
             <span #totalCarbs id="totalCarbs"> </span>
                 <br/>
-
+                <p id ="list"></p>
             <select #labelSelect>
                 <option value="Breakfast">Breakfast</option>
                 <option value="Lunch">Lunch</option>
@@ -27,6 +27,7 @@
                 <option value="Snack">Snack</option>
             </select>
                 <br/>
+                
             <button id="button" (click)="addMeal(totalCarbs.textContent, labelSelect.value)">Add meal</button>
             <br/>
                 

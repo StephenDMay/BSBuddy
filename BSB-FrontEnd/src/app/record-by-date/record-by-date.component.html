@@ -1,9 +1,27 @@
 
 <main>
-    <div id="dayRecords">
-        <app-record *ngFor="let record of records" [record]="record"></app-record>
+    
+    
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Blood Sugar</th>
+                    <th>Label</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr >
+            </thead>
+            <tbody>
+                <tr *ngFor="let record of records" [record]="record">
+                    <th>{{record.bsValue}}</th>
+                    <td>{{record.label}}</td>
+                    <td>{{record.date}}</td>
+                    <td>{{record.time}}</td>
+                </tr>
+            </tbody>
 
-    </div>
+        </table>
+
     <br/>
     <br/>
     <app-daily-values></app-daily-values>

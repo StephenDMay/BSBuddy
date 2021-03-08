@@ -47,14 +47,14 @@ export class FoodTrackerComponent implements OnInit {
             let br = document.createElement("br");
             foodItem.textContent = name;
             carbCount.textContent = " | " + carbs;
-            document.getElementById("showFood").appendChild(br);
-            document.getElementById("showFood").appendChild(foodItem);
-            document.getElementById("showFood").appendChild(carbCount);
-            document.getElementById("showFood").appendChild(br);
+            document.getElementById("list").appendChild(br);
+            document.getElementById("list").appendChild(foodItem);
+            document.getElementById("list").appendChild(carbCount);
+            document.getElementById("list").appendChild(br);
             
             
             
-            document.getElementById("carbCount").textContent = carbs;
+            
             
         }
     );

@@ -100,15 +100,14 @@ export class BsManagerService {
 
   }
 
-  getInfo() : Observable<info[]> {
-    return this.http.get<info[]>(this.baseUrl + "/viewinfo")
+  getInfo() : Observable<info> {
+    return this.http.get<info>(this.baseUrl + "/viewinfo")
     .pipe(
       tap(x => console.log(x)),
       catchError(err => {
         console.log(err);
-        let empty : info[];
+        let empty : info;
         return of(empty);
-      
       })
       );
 

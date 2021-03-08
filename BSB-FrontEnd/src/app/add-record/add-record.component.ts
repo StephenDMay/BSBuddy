@@ -22,7 +22,7 @@ export class AddRecordComponent implements OnInit {
 
   addRecord( label : string) {
     let toAdd : record = {bsValue : this.bsValue, label}
-    this.service.addRecord(toAdd).subscribe((_) => {this.router.navigate(["/allrecords"])});
+    this.service.addRecord(toAdd).subscribe((_) => {this.router.navigate(["/day"])});
 
   }
 
