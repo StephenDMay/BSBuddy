@@ -66,7 +66,7 @@ export class FoodTrackerComponent implements OnInit {
     let carbs = parseFloat(totalCarbs);
     console.log(carbs);
     let toAdd : meal = {carbs, label}
-    this.service.addMeal(toAdd).subscribe();
+    this.service.addMeal(toAdd).subscribe((_) => {this.router.navigate(["/day"])});
   }
 
 }

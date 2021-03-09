@@ -2,7 +2,7 @@
     <table mat-table [dataSource]="dataSource">
         <ng-container matColumnDef="bsValue">
             <th mat-header-cell *matHeaderCellDef>Blood Sugar</th>
-            <td mat-cell *matCellDef="let record of records" [record]="record">{{record.bsValue}}</td>
+            <th mat-cell *matCellDef="let record of records" [record]="record">{{record.bsValue}}</th>
         </ng-container>
 
         <ng-container matColumnDef="label">
@@ -27,29 +27,5 @@
 
     <mat-paginator id="paginator" [pageSize]="10" [pageSizeOptions]="[10,20]" showFirstLastButtons></mat-paginator>
 </div>
-
-
-
-    <!-- <table >
-    <thead>
-        <tr>
-            <th>Blood Sugar</th>
-            <th>Label</th>
-            <th>Date</th>
-            <th>Time</th>
-        </tr >
-    </thead>
-    <tbody>    
-        <tr *ngFor="let record of records" [record]="record">
-            <th>{{record.bsValue}}</th>
-            <td>{{record.label}}</td>
-            <td>{{record.date}}</td>
-            <td>{{record.time}}</td>
-        </tr>
-    </tbody>
-    
-        
-    
-</table> -->
 
 

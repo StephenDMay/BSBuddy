@@ -25,8 +25,10 @@ export class DailyValuesComponent implements OnInit {
       let dailyAvg = document.createElement("span");
       let dc = this.daily[0].totalCarbs.toString();
       let avg = this.daily[0].avgBS.toString();
-      dailyC.style.fontFamily = "'monospace', lucida console";
-      dailyC.style.fontWeight = "bold";
+      // dailyC.style.fontWeight = "bold";
+      // dailyA.style.fontWeight = "bold";
+      dailyCarbs.style.fontWeight = "bold";
+      dailyAvg.style.fontWeight = "bold";
       if ( this.daily[0].avgBS > 150 || this.daily[0].avgBS < 70) {
         dailyAvg.style.color = "red";
       }
