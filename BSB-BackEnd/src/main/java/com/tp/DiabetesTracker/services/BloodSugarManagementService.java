@@ -45,11 +45,13 @@ public class BloodSugarManagementService {
         return RatioDao.addRatio(toAdd);
     }
 
-    public List<InsulinRatio> getAllRatios() { return RatioDao.getAllRatios();
+    public List<InsulinRatio> getAllRatios() {
+        return RatioDao.getAllRatios();
     }
 
 
-    public PersonalInfo editInfo(PersonalInfo toEdit) throws InvalidWeightException { return piDao.editWeight(toEdit);
+    public PersonalInfo editHeight(PersonalInfo toEdit) throws InvalidWeightException {
+        return piDao.editWeight(toEdit);
     }
 
 
@@ -65,4 +67,11 @@ public class BloodSugarManagementService {
     public List<DailyValues> getDailyValues() {
         return mealdao.getDailyValues();
     }
+
+
+    public PersonalInfo editWeight(PersonalInfo toEdit) throws InvalidHeightException {
+        return piDao.editHeight(toEdit);
+    }
+
+
 }

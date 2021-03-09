@@ -14,7 +14,8 @@ import { DailyValuesComponent } from './daily-values/daily-values.component';
 import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { MatTableModule, MatTableDataSource, } from '@angular/material/table';
 import { CdkTableModule } from '@angular/cdk/table';
-import { MatPaginatorModule } from '@angular/material/paginator'
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { EditPiComponent } from './edit-pi/edit-pi.component'
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { MatPaginatorModule } from '@angular/material/paginator'
     FoodTrackerComponent,
     DailyValuesComponent,
     PersonalInfoComponent,
+    EditPiComponent,
   ],
   imports: [
     BrowserModule,

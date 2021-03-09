@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddRecordComponent } from './add-record/add-record.component';
+import { EditPiComponent } from './edit-pi/edit-pi.component';
 import { FoodTrackerComponent } from './food-tracker/food-tracker.component';
 import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { RecordByDateComponent } from './record-by-date/record-by-date.component';
@@ -10,7 +11,8 @@ const routes: Routes = [{path: "allrecords", component: RecordLogsComponent},
 {path: "bloodsugar", component: AddRecordComponent},
 {path: "day", component: RecordByDateComponent},
 {path: "food", component: FoodTrackerComponent},
-{path: "viewinfo", component : PersonalInfoComponent}];
+{path: "viewinfo", component : PersonalInfoComponent},
+{path: "editinfo", component : EditPiComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

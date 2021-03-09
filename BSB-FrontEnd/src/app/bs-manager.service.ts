@@ -112,4 +112,27 @@ export class BsManagerService {
       );
 
   }
+
+  editWeight(toEdit) : Observable<info> {
+    return this.http.put<info>(this.baseUrl + "/editinfo/1/weight", toEdit, this.httpOptions)
+    .pipe(
+      tap(x => console.log(x)),
+      catchError(err => {
+        console.log(err);
+        return of(null);
+      })
+    )
+  }
+
+
+  editHeight(toEdit) : Observable<info> {
+    return this.http.put<info>(this.baseUrl + "/editinfo/1/height", toEdit, this.httpOptions)
+  .pipe(
+    tap(x => console.log(x)),
+    catchError(err => {
+      console.log(err);
+      return of(null);
+    })
+  )
+}
 }

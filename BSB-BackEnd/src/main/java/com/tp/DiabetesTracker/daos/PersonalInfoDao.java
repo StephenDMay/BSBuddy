@@ -13,5 +13,7 @@ public interface PersonalInfoDao {
 
     PersonalInfo editWeight(PersonalInfo toEdit) throws InvalidWeightException;
 
+    PersonalInfo editHeight(PersonalInfo toEdit) throws InvalidHeightException;
+
     List<PersonalInfo> getInfo();
 }

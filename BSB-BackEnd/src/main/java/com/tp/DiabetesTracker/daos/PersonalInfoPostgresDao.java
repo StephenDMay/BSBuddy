@@ -65,6 +65,19 @@ public class PersonalInfoPostgresDao implements PersonalInfoDao {
     }
 
     @Override
+    public PersonalInfo editHeight(PersonalInfo toEdit) throws InvalidHeightException {
+
+        if(toEdit.getHeight() == null) throw new InvalidHeightException("Invalid height provided.");
+        template.update("UPDATE \"PersonalInfo\"\n" +
+                        "SET \"Height(in.)\" = ?\n" +
+                        "WHERE \"UserId\" = '1';",
+                toEdit.getHeight());
+
+
+        return toEdit;
+    }
+
+    @Override
     public List<PersonalInfo> getInfo() {
 
         List<PersonalInfo> info = template.query("SELECT * FROM public.\"PersonalInfo\"",

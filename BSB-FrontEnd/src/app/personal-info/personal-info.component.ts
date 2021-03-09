@@ -1,3 +1,4 @@
+import { BoundElementProperty } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { BsManagerService } from '../bs-manager.service';
 import { info } from '../info';
@@ -28,6 +29,8 @@ export class PersonalInfoComponent implements OnInit {
       let roundNum = parseFloat(rounded);
       let rBmi = document.createElement("span");
       rBmi.textContent = rounded;
+      rBmi.style.marginLeft = "42%";
+      rBmi.style.fontWeight = "bold";
 
       if ( roundNum > 24.9 || roundNum < 18.5) {
         rBmi.style.color = "red";

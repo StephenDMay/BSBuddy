@@ -1,10 +1,7 @@
 package com.tp.DiabetesTracker.controllers;
 
 
-import com.tp.DiabetesTracker.daos.mappers.BloodSugarMapper;
-import com.tp.DiabetesTracker.daos.mappers.PersonalInfoMapper;
 import com.tp.DiabetesTracker.exceptions.*;
-import com.tp.DiabetesTracker.models.BloodSugarRecord;
 import com.tp.DiabetesTracker.models.PersonalInfo;
 import com.tp.DiabetesTracker.services.BloodSugarManagementService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -37,19 +33,32 @@ public class PersonalInfoController {
         return ResponseEntity.ok(enteredInfo);
     }
 
-    @PutMapping("/editinfo/{userId}")
-    public ResponseEntity editWeight(@RequestBody PersonalInfo toEdit) {
-        PersonalInfo editInfo = null;
+    @PutMapping("/editinfo/{userId}/height")
+    public String editHeight(@RequestBody PersonalInfo toEdit) {
         try {
-            editInfo = service.editInfo(toEdit);
+            service.editHeight(toEdit);
+            return "Height updated successfully";
         } catch (InvalidWeightException e) {
-            e.printStackTrace();
+            return e.getMessage();
         }
-        return ResponseEntity.ok(editInfo);
     }
 
     @GetMapping("/viewinfo")
     public List<PersonalInfo> getInfo() {
         return service.getInfo();
     }
+
+
+    @PutMapping("/editinfo/{userId}/weight")
+    public String editWeight(@RequestBody PersonalInfo toEdit) {
+        try {
+            service.editHeight(toEdit);
+            return "Weight updated successfully";
+        } catch (InvalidWeightException e) {
+            return e.getMessage();
+        }
+
+
+    }
+
 }

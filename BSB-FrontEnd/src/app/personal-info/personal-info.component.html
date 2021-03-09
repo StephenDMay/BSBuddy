@@ -1,11 +1,11 @@
 <div id="info" >
     <div *ngFor="let info of info" [info]="info" >
-        <h4>Welcome to {{info.name}}'s Blood Sugar Buddy!</h4>
+        <h4>Hello {{info.name}}! Let's track your blood sugar.</h4>
         <br/>
         <div id="WandH">
-            <span>Height: {{info.height}}</span>
+            <span>Height(inches): {{info.height}}</span>
             <br/>
-            <span>Weight: {{info.weight}}</span>
+            <span>Weight(pounds): {{info.weight}}</span>
         </div>
         <div id="minMax">
             <span>Minimum BS Value: {{info.minBS}}</span>
@@ -13,7 +13,10 @@
             <span>Maximum BS Value: {{info.maxBS}}</span>
         </div>
         <br/>
-        <span> BMI:  </span>
+        <a href="/editinfo"><button id="edit">Edit</button></a>
+        <span id="bmi"> BMI:  </span>
+
+        
         
         
         
