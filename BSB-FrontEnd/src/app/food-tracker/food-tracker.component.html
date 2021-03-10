@@ -6,7 +6,7 @@
             <input id="search" type="text" placeholder="Add a food item">
             <button id="button" (click)="findFood()">Add Food</button>
                 <br/>
-            <span>Carbohydrates: </span>
+            
             <span id="carbs"></span>
             
 
@@ -17,6 +17,22 @@
             <span>
                 This meal's total carbohydrates:
             </span>
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>Food Item</th>
+                        <th>Carbs</th>
+                        
+                    </tr >
+                </thead>
+                <tbody id="tableBody">
+                    
+                </tbody>
+                <tfoot id="tableFoot">
+
+                </tfoot>
+    
+            </table>
             <span #totalCarbs id="totalCarbs"> </span>
                 <br/>
                 <p id ="list"></p>

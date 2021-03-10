@@ -56,7 +56,7 @@
   }
 
 table{
-  border: 10px solid #062550;
+  /* border: 10px solid #062550; */
   border-collapse: collapse;
   margin-top: 235px;
   border-radius: 10px;
