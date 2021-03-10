@@ -48,6 +48,12 @@ public class BloodSugarRecordController {
         return service.getRecordByDate();
     }
 
+
+    @DeleteMapping("/delete/{bsValueId}")
+    public String deleteRecord(@PathVariable Integer bsValueId) throws InvalidBSValueException {
+        service.deleteRecord(bsValueId);
+        return "Record " + bsValueId + " deleted.";
+    }
 }
 
 

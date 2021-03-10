@@ -10,10 +10,10 @@ import { info } from '../info';
 })
 export class EditPiComponent implements OnInit {
   name : string;
-    height : number;
-    weight : number;
-    minBS : number;
-    maxBS : number;
+  height : number;
+  weight : number;
+  minBS : number;
+  maxBS : number;
 
   constructor(private service: BsManagerService, private router : Router) { }
 

@@ -1,9 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { BsManagerService } from '../bs-manager.service';
 import { record } from '../record';
-import { MatTableModule, MatTableDataSource, MatTable, } from '@angular/material/table'
-import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator'
+import { MatTableDataSource } from '@angular/material/table'
+import { MatPaginator } from '@angular/material/paginator'
 import { AfterViewInit } from '@angular/core';
+
+import { Router } from '@angular/router';
 
 
 
@@ -13,17 +15,17 @@ import { AfterViewInit } from '@angular/core';
   styleUrls: ['./record-logs.component.css']
 })
 export class RecordLogsComponent implements OnInit, AfterViewInit {
-  
 
   records : record[];
   
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatPaginator) dataSource: MatTableDataSource<record>;
   pageSize: number = 10;
-  columnsToDisplay : string[] = ['bsValue', 'label', 'date', 'time'];
+  columnsToDisplay : string[] = ['bsValue', 'label', 'date', 'time', 'action'];
+  
   
 
-  constructor(private bsManagerService : BsManagerService) { 
+  constructor(private bsManagerService : BsManagerService, private router : Router) { 
    
   }
 
@@ -44,7 +46,10 @@ export class RecordLogsComponent implements OnInit, AfterViewInit {
 
   
   
-  
+  deleteRecord(bsValueId : number) {
+    confirm("Are you sure you want to delete this record?");
+    this.bsManagerService.deleteRecord(bsValueId).subscribe((_) => {this.router.navigate(["/allrecords"])});
+  }
   
 }
 

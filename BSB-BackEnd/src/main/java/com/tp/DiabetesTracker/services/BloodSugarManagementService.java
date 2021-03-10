@@ -50,8 +50,8 @@ public class BloodSugarManagementService {
     }
 
 
-    public PersonalInfo editHeight(PersonalInfo toEdit) throws InvalidWeightException {
-        return piDao.editWeight(toEdit);
+    public PersonalInfo editHeight(PersonalInfo toEdit) throws InvalidHeightException {
+        return piDao.editHeight(toEdit);
     }
 
 
@@ -69,9 +69,12 @@ public class BloodSugarManagementService {
     }
 
 
-    public PersonalInfo editWeight(PersonalInfo toEdit) throws InvalidHeightException {
-        return piDao.editHeight(toEdit);
+    public PersonalInfo editWeight(PersonalInfo toEdit) throws InvalidWeightException {
+        return piDao.editWeight(toEdit);
     }
 
 
+    public void deleteRecord(Integer bsValueId) {
+        dao.deleteRecord(bsValueId);
+    }
 }

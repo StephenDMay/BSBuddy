@@ -3,8 +3,8 @@
     border-color: #033d68;
     border-style: solid;
     border-width: 10px;
-    width: 31%;
-    margin-left: -15%;
+    width: 45%;
+    margin-left: -22%;
     margin-top: 250px;
     border-radius: 20px;
     
@@ -32,7 +32,7 @@ h4 {
 }
 
 #bmi {
-    margin-left: 13%;
+    margin-left: 8%;
     font-size: 1.2em;
 }
 

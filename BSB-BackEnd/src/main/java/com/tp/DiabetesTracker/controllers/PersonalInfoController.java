@@ -1,6 +1,4 @@
 package com.tp.DiabetesTracker.controllers;
-
-
 import com.tp.DiabetesTracker.exceptions.*;
 import com.tp.DiabetesTracker.models.PersonalInfo;
 import com.tp.DiabetesTracker.services.BloodSugarManagementService;
@@ -38,7 +36,7 @@ public class PersonalInfoController {
         try {
             service.editHeight(toEdit);
             return "Height updated successfully";
-        } catch (InvalidWeightException e) {
+        } catch (InvalidHeightException e) {
             return e.getMessage();
         }
     }
@@ -50,9 +48,9 @@ public class PersonalInfoController {
 
 
     @PutMapping("/editinfo/{userId}/weight")
-    public String editWeight(@RequestBody PersonalInfo toEdit) {
+    public String editWeight(@RequestBody PersonalInfo toEdit) throws InvalidWeightException {
         try {
-            service.editHeight(toEdit);
+            service.editWeight(toEdit);
             return "Weight updated successfully";
         } catch (InvalidWeightException e) {
             return e.getMessage();

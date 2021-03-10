@@ -135,4 +135,15 @@ export class BsManagerService {
     })
   )
 }
+
+  deleteRecord(bsValueId) : Observable<record>{
+    return this.http.delete<record>(this.baseUrl + "/delete/" + bsValueId)
+    .pipe(
+      tap(x => console.log(x)),
+      catchError(err => {
+        console.log(err);
+        return of(null);
+      })
+    )
+  }
 }

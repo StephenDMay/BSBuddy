@@ -12,10 +12,17 @@ import { RecordByDateComponent } from './record-by-date/record-by-date.component
 import { FoodTrackerComponent } from './food-tracker/food-tracker.component';
 import { DailyValuesComponent } from './daily-values/daily-values.component';
 import { PersonalInfoComponent } from './personal-info/personal-info.component';
-import { MatTableModule, MatTableDataSource, } from '@angular/material/table';
-import { CdkTableModule } from '@angular/cdk/table';
+import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { EditPiComponent } from './edit-pi/edit-pi.component'
+import { EditPiComponent } from './edit-pi/edit-pi.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+
+
+
 
 
 @NgModule({
@@ -36,7 +43,8 @@ import { EditPiComponent } from './edit-pi/edit-pi.component'
     HttpClientModule,
     FormsModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

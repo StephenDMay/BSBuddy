@@ -54,7 +54,10 @@ public class BloodSugarRecordInMemDao implements BloodSugarRecordDao{
         return null;
     }
 
+    @Override
+    public void deleteRecord(Integer bsValueId) {
 
+    }
 
 
 }

@@ -17,7 +17,12 @@
 
         <ng-container matColumnDef="time">
             <th mat-header-cell *matHeaderCellDef>Time</th>
-            <td mat-cell *matCellDef="let record of records" [record]="record">{{record.time}}</td>
+            <td mat-cell *matCellDef="let record of records;" [record]="record" >{{record.time}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef>Action</th>
+            <td mat-cell *matCellDef="let record of records;" [record]="record"><button id="delete"  (click)="deleteRecord(record.bsValueId)">Delete</button></td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>

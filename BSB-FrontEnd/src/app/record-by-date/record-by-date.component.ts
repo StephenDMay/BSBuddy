@@ -5,6 +5,7 @@ import { daily } from '../daily';
 import { MatTableModule, MatTableDataSource, MatTable, } from '@angular/material/table'
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator'
 import { AfterViewInit } from '@angular/core';
+import * as Chart from 'chart.js';
 
 @Component({
   selector: 'app-record-by-date',
@@ -27,7 +28,6 @@ export class RecordByDateComponent implements OnInit, AfterViewInit {
     this.bsManagerService.getByDate().subscribe(list => {
       this.records = list;
     });
-
 
   }
 

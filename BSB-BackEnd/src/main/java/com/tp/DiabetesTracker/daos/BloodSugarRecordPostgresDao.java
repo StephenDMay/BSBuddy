@@ -50,7 +50,7 @@ public class BloodSugarRecordPostgresDao implements BloodSugarRecordDao {
     }
 
 
-    // TODO: Update to allow for days other than today
+
     @Override
     public List<BloodSugarRecord> getRecordsByDate() {
         List<BloodSugarRecord> recordsByDate = template.query("SELECT *\n" +
@@ -58,6 +58,13 @@ public class BloodSugarRecordPostgresDao implements BloodSugarRecordDao {
                 "\t\tWHERE \"Date\" = CURRENT_DATE ORDER BY \"BSValueId\" DESC ;", new BloodSugarMapper());
 
         return recordsByDate;
+    }
+
+
+    @Override
+    public void deleteRecord(Integer bsValueId) {
+        template.update("DELETE FROM public.\"BloodSugarValue\"\n" +
+                "\tWHERE \"BSValueId\" = ?;", bsValueId);
     }
 
 

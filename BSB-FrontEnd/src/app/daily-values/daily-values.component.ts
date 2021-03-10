@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BsManagerService } from '../bs-manager.service';
 import { daily } from '../daily'
+import { ChartsModule } from 'ng2-charts';
 
 @Component({
   selector: 'app-daily-values',
@@ -15,7 +16,7 @@ export class DailyValuesComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // TODO: Print out values!!!!!!!!!!!!!!!!!
+
     this.bsManagerService.getDailyValues().subscribe(list => {
       this.daily = list;
       let dailyC = document.createElement("span");
@@ -25,8 +26,7 @@ export class DailyValuesComponent implements OnInit {
       let dailyAvg = document.createElement("span");
       let dc = this.daily[0].totalCarbs.toString();
       let avg = this.daily[0].avgBS.toString();
-      // dailyC.style.fontWeight = "bold";
-      // dailyA.style.fontWeight = "bold";
+
       dailyCarbs.style.fontWeight = "bold";
       dailyAvg.style.fontWeight = "bold";
       if ( this.daily[0].avgBS > 150 || this.daily[0].avgBS < 70) {
