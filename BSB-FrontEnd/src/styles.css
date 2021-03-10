@@ -78,6 +78,7 @@ thead tr {
 th, td{
   border: 2px solid #033d68;
   padding: 12px 15px;
+  text-align: center;
   
 }
 
@@ -113,7 +114,7 @@ h1, h2, h3, h4, h5 {
 button{
   background-color: #2a71d4;
   display:inline-block;
-  padding:0.3em 1.2em;
+  padding:0.1em 0.9em;
   margin:0 0.1em 0.1em 0;
   border:0.16em solid #2a71d4;
   border-radius:2em;

@@ -49,6 +49,7 @@ export class RecordLogsComponent implements OnInit, AfterViewInit {
   deleteRecord(bsValueId : number) {
     confirm("Are you sure you want to delete this record?");
     this.bsManagerService.deleteRecord(bsValueId).subscribe((_) => {this.router.navigate(["/allrecords"])});
+    window.location.reload();
   }
   
 }
