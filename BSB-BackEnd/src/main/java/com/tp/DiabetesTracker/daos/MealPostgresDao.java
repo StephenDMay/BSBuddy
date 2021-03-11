@@ -23,8 +23,8 @@ public class MealPostgresDao implements MealDao{
     public Meal addMeal(Meal toAdd) {
         Integer mealId = template.queryForObject(
                 "INSERT INTO public.\"Meals\"(\n" +
-                        "\t \"Total Carbs\", \"Date\", \"Label\")\n" +
-                        "\tVALUES (?, CURRENT_DATE, ?);",
+                        "\t\"Total Carbs\", \"Date\", \"Label\")\n" +
+                        "\tVALUES (?, Current_Date, ?) RETURNING \"MealId\";",
                 new IntegerMapper("MealId"),
                 toAdd.getCarbs(),
                 toAdd.getLabel());

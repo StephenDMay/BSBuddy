@@ -45,7 +45,11 @@ export class FoodTrackerComponent implements OnInit {
             let carbNum = parseFloat(carbs);
             total += carbNum;
             let name = foodName.toString();
-
+            let totStr = total.toString();
+            let totalCarbs = document.createElement("span");
+            totalCarbs.id = "totalCarbs";
+            document.getElementById("totalCarbs").textContent = totStr;
+            document.getElementById("totalCarbs").hidden = true;
             document.getElementById("tableBody").innerHTML += `
               <tr>
                 <td>${name}</td>

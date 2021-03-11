@@ -37,3 +37,16 @@
     border:0.16em solid #000000;
 }
 
+#textvalue {
+    padding-top: 20px;
+
+}
+
+#add {
+    text-align: center;
+    margin-left: 35%;
+}
+
+span {
+    padding: 10px 10px 10px 10px;
+}
