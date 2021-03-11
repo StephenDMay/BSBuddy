@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BsManagerService } from '../bs-manager.service';
 import { record } from '../record';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-add-record',

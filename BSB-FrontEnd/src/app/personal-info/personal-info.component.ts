@@ -2,6 +2,7 @@ import { BoundElementProperty } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { BsManagerService } from '../bs-manager.service';
 import { info } from '../info';
+import {MatDividerModule} from '@angular/material/divider';
 
 @Component({
   selector: 'app-personal-info',

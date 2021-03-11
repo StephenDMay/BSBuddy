@@ -15,7 +15,7 @@ h4 {
     padding-top: 10px;
     text-align: center;
     font-weight: bolder;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 #WandH {
@@ -32,7 +32,7 @@ h4 {
 }
 
 #bmi {
-    margin-left: 8%;
+    margin-left: 10%;
     font-size: 1.2em;
 }
 

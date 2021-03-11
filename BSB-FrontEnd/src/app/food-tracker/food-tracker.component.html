@@ -3,8 +3,8 @@
     <main>
         <div id="searchFood">
             
-            <input id="search" type="text" placeholder="Add a food item">
-            <button id="button" (click)="findFood()">Add Food</button>
+            <input id="search" type="text" placeholder="Add a food item" [(ngModel)]="name">
+            <button mat-button id="button" (click)="findFood()" [disabled]="!name">Add Food</button>
                 <br/>
             
             <span id="carbs"></span>
@@ -44,7 +44,7 @@
             </select>
                 <br/>
                 
-            <button id="button" (click)="addMeal(totalCarbs.textContent, labelSelect.value)">Add meal</button>
+            <button mat-button id="button" (click)="addMeal(totalCarbs.textContent, labelSelect.value)">Add meal</button>
             <br/>
                 
 

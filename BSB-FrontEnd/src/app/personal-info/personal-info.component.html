@@ -1,6 +1,7 @@
 <div id="info" >
     <div *ngFor="let info of info" [info]="info" >
         <h4>Hello {{info.name}}! Let's track your blood sugar.</h4>
+        <mat-divider></mat-divider>
         <br/>
         <div id="WandH">
             <span>Height(inches): {{info.height}}</span>

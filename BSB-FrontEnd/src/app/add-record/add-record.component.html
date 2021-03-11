@@ -1,7 +1,9 @@
 <div id="addBS">
     
+
+
     <span id="textValue"> Value:  </span>
-    <input type="text" [(ngModel)]="bsValue">
+    <input type="text" [(ngModel)]="bsValue" name="bs">
     <br/>
     <span id="textValue2"> Label: </span>
     <select #labelSelect>
@@ -19,6 +21,6 @@
     <br/>
     <br/>
     
-    <button id="add" (click)="addRecord(labelSelect.value)">Add</button>
+    <button mat-button id="add" (click)="addRecord(labelSelect.value)" [disabled]="!bsValue">Add</button>
     <br/>
 </div>
