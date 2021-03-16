@@ -21,6 +21,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
+import { GoogleChartsModule } from 'angular-google-charts';
+import { GoogleChartComponent } from './google-chart/google-chart.component';
 
 
 
@@ -38,6 +40,7 @@ import {MatDividerModule} from '@angular/material/divider';
     DailyValuesComponent,
     PersonalInfoComponent,
     EditPiComponent,
+    GoogleChartComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatTableModule,
     MatPaginatorModule,
     MatDividerModule,
-    MatButtonModule
+    MatButtonModule,
+    GoogleChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

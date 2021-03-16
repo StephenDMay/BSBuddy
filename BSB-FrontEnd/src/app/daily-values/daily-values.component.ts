@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BsManagerService } from '../bs-manager.service';
 import { daily } from '../daily'
-import { ChartsModule } from 'ng2-charts';
+import {GoogleChartsModule} from 'angular-google-charts';
 
 @Component({
   selector: 'app-daily-values',
