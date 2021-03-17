@@ -71,6 +71,13 @@ export class GoogleChartComponent implements OnInit {
                   display: true
                 }]
               },
+              layout: {
+                padding: {
+                  left: 10,
+                  top: 30,
+                  right: 10
+                }
+              }
               
             }
         })
