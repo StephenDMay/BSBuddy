@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BsManagerService } from '../bs-manager.service';
 import { daily } from '../daily'
 import {GoogleChartsModule} from 'angular-google-charts';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-daily-values',
@@ -11,6 +12,8 @@ import {GoogleChartsModule} from 'angular-google-charts';
 export class DailyValuesComponent implements OnInit {
 
   daily : daily;
+
+  updateIfItsYou: Subject<any> = new Subject();
 
   constructor(private bsManagerService : BsManagerService) { }
 

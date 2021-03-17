@@ -1,0 +1,13 @@
+#canvas {
+    width: 400px;
+    height: 400px;
+}
+
+#chart {
+    width: 400px;
+    height: 400px;
+    margin-left: 55%;
+    margin-bottom: 70%;
+    margin-top: -100px;
+    display: inline-block;
+}

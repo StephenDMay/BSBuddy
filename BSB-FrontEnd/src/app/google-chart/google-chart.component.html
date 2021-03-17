@@ -1,11 +1,15 @@
 
-<google-chart #chart 
+<!-- <google-chart #chart *ngFor="let record of records" [record]="record"
 [title]="title"
 [type]="type"
-[data]="data"
+[data]= 'data'
 [options]="options"
 [width]="width"
 [height]="height">
-</google-chart>
+</google-chart> -->
+
+<div id="chart">
+    <canvas id="canvas">{{ chart }}</canvas>
+</div>
 
 

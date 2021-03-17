@@ -15,14 +15,12 @@ import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { EditPiComponent } from './edit-pi/edit-pi.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
 import { GoogleChartsModule } from 'angular-google-charts';
 import { GoogleChartComponent } from './google-chart/google-chart.component';
+import { BsManagerService } from './bs-manager.service';
+
 
 
 
@@ -51,9 +49,10 @@ import { GoogleChartComponent } from './google-chart/google-chart.component';
     MatPaginatorModule,
     MatDividerModule,
     MatButtonModule,
-    GoogleChartsModule
+    GoogleChartsModule,
+
   ],
-  providers: [],
+  providers: [BsManagerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

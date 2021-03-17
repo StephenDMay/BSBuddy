@@ -8,6 +8,7 @@ import { FoodTrackerComponent } from './food-tracker/food-tracker.component';
 import { meal } from './meal';
 import { daily } from './daily';
 import { info } from './info';
+import { map, filter, switchMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,8 @@ export class BsManagerService {
   //url to begin calling food nutrition data, (+ food name)
   nutUrl : string = "https://api.nal.usda.gov/fdc/v1/foods/search?api_key=SohihGmRVzAtcLPY0c3Yo2SQsWE8V2992IbSe4VT&query="
   httpOptions = {headers: new HttpHeaders({"Content-Type" : "application/json"})}
+
+  result : object;
 
   constructor(private http : HttpClient) { }
 
@@ -145,5 +148,10 @@ export class BsManagerService {
         return of(null);
       })
     )
+  }
+
+  getChart(){
+    return this.http.get(this.baseUrl + "/day")
+      .pipe(map(result => result));
   }
 }
