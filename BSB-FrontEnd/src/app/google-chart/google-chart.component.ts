@@ -10,6 +10,7 @@ import {record} from '../record';
 import { Chart } from 'chart.js';
 import { map, filter, switchMap } from 'rxjs/operators';
 import { Time } from '@angular/common';
+import { TemplateBindingParseResult } from '@angular/compiler';
 
 
 @Component({
@@ -39,21 +40,18 @@ export class GoogleChartComponent implements OnInit {
 
     this.bsManagerService.getChart()
       .subscribe(res => {
-        console.log("this one")
-        console.log(res);
 
-        
         let tempBS = res['map'](res => res.bsValue);
         let tempTime = res['map'](res=> res.time);
-        console.log("tempBS = " + tempBS)
-        console.log("time = " + tempTime)
+        let revBS = tempBS.reverse();
+        let revTime = tempTime.reverse();
 
         this.chart = new Chart('canvas', {
             type: 'line',
             data: {
-              labels: tempTime,
+              labels: revTime,
               datasets: [ {
-                data: tempBS,
+                data: revBS,
                 borderColor: 'blue',
                 fill: false,
                 backgroundColor: 'red'
@@ -66,7 +64,8 @@ export class GoogleChartComponent implements OnInit {
               },
               scales: {
                 xAxes: [{
-                  display: true
+                  display: true,
+                  
                 }],
                 yAxes: [{
                   display: true
